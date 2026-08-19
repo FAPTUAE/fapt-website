@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>FAPT — Coming Soon | Futuristic Automated Property Transactions</title>
+<meta name="description" content="FAPT — Futuristic Automated Property Transactions. The future of real estate, fully automated. A Motionray product. Launching soon."/>
+<meta name="theme-color" content="#1c1712"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="FAPT — Futuristic Automated Property Transactions"/>
+<meta property="og:description" content="The future of property, fully automated. A Motionray product. Launching soon."/>
+<meta property="og:image" content="assets/fapt-hero-gold.jpg"/>
+<meta property="og:url" content="https://fapt.motionray.io"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="icon" href="assets/favicon.ico"/>
+<link rel="apple-touch-icon" href="assets/favicon-192.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+<style>
+  :root{
+    --bg:#1c1712; --bg2:#120d09;
+    --gold-l:#DBC29E; --gold:#C9A86E; --gold-d:#8A6E52; --bronze:#795F45;
+    --cream:#F3ECE1; --muted:#b7a892;
+    --grad:linear-gradient(105deg,#DBC29E,#C9A86E 45%,#8A6E52);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    font-family:'Poppins',system-ui,sans-serif;color:var(--cream);
+    background:var(--bg);min-height:100vh;overflow-x:hidden;position:relative;
+    display:flex;flex-direction:column;
+  }
+  /* hero art background */
+  .bg{position:fixed;inset:0;z-index:0;background:url('assets/fapt-hero.jpg') center/cover no-repeat;filter:saturate(1.05)}
+  .bg-scrim{position:fixed;inset:0;z-index:1;background:
+     radial-gradient(80% 70% at 50% 42%, rgba(28,23,18,.35), rgba(18,13,9,.86) 100%),
+     linear-gradient(180deg, rgba(18,13,9,.7) 0%, rgba(18,13,9,.25) 40%, rgba(18,13,9,.92) 100%)}
+  #spark{position:fixed;inset:0;z-index:2;opacity:.7}
+  .grain{position:fixed;inset:0;z-index:2;pointer-events:none;opacity:.05;
+    background-image:radial-gradient(rgba(255,255,255,.5) 1px, transparent 1px);background-size:3px 3px}
+
+  .wrap{position:relative;z-index:3;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:54px 24px 30px}
+
+  .logo{width:min(360px,74vw);opacity:0;animation:rise 1.3s cubic-bezier(.2,.7,.2,1) .15s forwards;
+    filter:drop-shadow(0 16px 50px rgba(0,0,0,.55))}
+  .logo img{width:100%;display:block;animation:float 7s ease-in-out infinite}
+
+  .badge{display:inline-flex;align-items:center;gap:9px;margin-top:30px;
+    font-size:12px;letter-spacing:.34em;text-transform:uppercase;color:var(--gold-l);font-weight:500;
+    border:1px solid rgba(201,168,110,.34);background:rgba(201,168,110,.06);
+    padding:9px 18px;border-radius:100px;backdrop-filter:blur(6px);
+    opacity:0;animation:rise 1s ease .5s forwards}
+  .badge .dot{width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 0 rgba(201,168,110,.5);animation:pulse 2.2s ease-out infinite}
+
+  h1{margin-top:24px;font-size:clamp(30px,6vw,60px);font-weight:700;letter-spacing:-.02em;line-height:1.06;
+    opacity:0;animation:rise 1s ease .65s forwards}
+  h1 .g{background:var(--grad);background-size:220% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 8s linear infinite}
+  .ar{margin-top:16px;font-family:'Cairo',sans-serif;font-weight:600;direction:rtl;
+    font-size:clamp(16px,2.6vw,22px);color:var(--gold-l);opacity:0;animation:rise 1s ease .8s forwards}
+  .sub{margin:18px auto 0;max-width:560px;font-weight:300;font-size:clamp(14px,2vw,17px);color:var(--muted);line-height:1.7;
+    opacity:0;animation:rise 1s ease .9s forwards}
+
+  .chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:32px auto 0;max-width:560px;opacity:0;animation:rise 1s ease 1.05s forwards}
+  .chip{font-size:13px;color:var(--gold-l);border:1px solid rgba(201,168,110,.28);border-radius:100px;padding:8px 16px;background:rgba(201,168,110,.05);transition:.35s}
+  .chip:hover{border-color:var(--gold);color:#fff;transform:translateY(-2px)}
+
+  footer{position:relative;z-index:3;text-align:center;padding:20px 24px 30px;font-size:13px;color:var(--muted);opacity:0;animation:rise 1s ease 1.3s forwards}
+  footer a{color:var(--gold-l);text-decoration:none;border-bottom:1px solid transparent;transition:.3s}
+  footer a:hover{color:#fff;border-color:var(--gold)}
+  .mr{display:inline-flex;align-items:center;gap:7px}
+
+  @keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+  @keyframes shine{to{background-position:220% center}}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(201,168,110,.5)}70%{box-shadow:0 0 0 10px rgba(201,168,110,0)}100%{box-shadow:0 0 0 0 rgba(201,168,110,0)}}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;opacity:1!important}}
+</style>
+</head>
+<body>
+  <div class="bg"></div>
+  <div class="bg-scrim"></div>
+  <canvas id="spark"></canvas>
+  <div class="grain"></div>
+
+  <main class="wrap">
+    <div class="logo"><img src="assets/fapt-stacked-gold-white.png" alt="FAPT — Futuristic Automated Property Transactions"/></div>
+    <span class="badge"><span class="dot"></span> Coming Soon</span>
+    <h1>The Future of Property,<br/><span class="g">Fully Automated.</span></h1>
+    <p class="sub">FAPT — an intelligent platform reimagining how real-estate deals are managed, from listing to closing. Something remarkable is on the way.</p>
+    <div class="chips">
+      <span class="chip">Automated Transactions</span>
+      <span class="chip">Smart Property Management</span>
+      <span class="chip">Seamless Deal Flow</span>
+      <span class="chip">AI-Powered</span>
+    </div>
+  </main>
+
+  <footer>
+    <span class="mr">A <b style="color:var(--gold-l);font-weight:600">Motionray</b> product</span>
+    &nbsp;·&nbsp; © <span id="yr"></span> FAPT. All rights reserved.
+  </footer>
+
+<script>
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  /* subtle gold sparks */
+  (function(){
+    const c=document.getElementById('spark'),x=c.getContext('2d');let w,h,dpr,ps,raf;
+    const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function rs(){dpr=Math.min(devicePixelRatio||1,2);w=c.width=innerWidth*dpr;h=c.height=innerHeight*dpr;c.style.width=innerWidth+'px';c.style.height=innerHeight+'px';
+      const n=Math.min(70,Math.floor(innerWidth*innerHeight/24000));
+      ps=Array.from({length:n},()=>({x:Math.random()*w,y:Math.random()*h,r:(Math.random()*1.4+.4)*dpr,vy:-(Math.random()*.25+.05)*dpr,vx:(Math.random()-.5)*.12*dpr,a:Math.random()*.5+.2}));}
+    function fr(){x.clearRect(0,0,w,h);
+      for(const p of ps){p.y+=p.vy;p.x+=p.vx;if(p.y<-5){p.y=h+5;p.x=Math.random()*w;}
+        x.beginPath();x.arc(p.x,p.y,p.r,0,7);x.fillStyle='rgba(219,194,158,'+p.a+')';x.fill();}
+      raf=requestAnimationFrame(fr);}
+    addEventListener('resize',()=>{cancelAnimationFrame(raf);rs();if(!reduce)fr();});
+    rs();if(!reduce)fr();
+  })();
+</script>
+</body>
+</html>
